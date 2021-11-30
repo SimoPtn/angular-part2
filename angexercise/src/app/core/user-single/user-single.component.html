@@ -1,0 +1,7 @@
+<div class="user d-flex justify-content-between">
+  <p class="mr-3">{{ user.name }} {{ user.surname }} {{ user.age }}  </p>
+  <div class="d-flex justify-content-around">
+    <button class="m-1" (click)="delete.emit(user)">Delete</button>
+    <button class="m-1" (click)="showed.emit(user)">Show Detail</button>
+  </div>
+</div>

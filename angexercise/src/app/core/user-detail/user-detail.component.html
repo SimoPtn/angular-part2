@@ -1,0 +1,25 @@
+<div id="user-detail">
+  <h6 class="mt-3 text-center fw-bold">user-detail.component</h6>
+  <div class="container text-left">
+      <p> id: {{ user.id }}</p>
+      <p> name: {{ user.name }}</p>
+      <p> surname: {{ user.surname }}</p>
+      <p> age: {{ user.age }}</p>
+      <p> Date of birth: {{ user.dateOfBirth | date: 'dd MMM yyyy' }}</p>
+      <p class="fw-bold"> Address: </p>
+      <p> City: {{ user.address?.city }}</p>
+      <p> Street: {{ user.address?.street }}</p>
+      <p> Postal Code: {{ user.address?.postalCode }}</p>
+      <p> Role: {{ user.role }}</p>
+      <p> usarname: {{ user.username }}</p>
+      <img src={{user.profilePhotoUrl}} style="width:150px;">
+      <p> Gender: {{ user.gender }}</p>
+      <div *ngFor="let company of user.companies">
+        <p class="fw-bold"> Company: {{ company.name }}</p>
+        <p> Description: {{ company.description }}</p>
+      </div>
+  </div>
+  <div class="d-flex direction-row justify-content-between">
+    <button (click)="deshowed.emit(user)" class="p-1 pl-4 pr-4 m-4">Chiudi</button>
+  </div>
+</div>

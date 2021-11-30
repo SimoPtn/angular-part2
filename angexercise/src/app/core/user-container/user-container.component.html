@@ -1,0 +1,6 @@
+<app-section-header
+  [title]="'User-Container'"
+  [button]="{ label: 'Vai a Order-Container', link: '/order'}">
+</app-section-header>
+  <app-user-list id="user-list" [users]="users" (delete)="deleteUser($event)" (showed)="showDetail($event)"></app-user-list>
+  <app-user-detail [user]="showedDetail" *ngIf="viewDetail === true" (deshowed)="deshowedDetail($event)"></app-user-detail>
