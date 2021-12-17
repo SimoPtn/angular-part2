@@ -9,19 +9,12 @@ import { CounterService } from 'src/app/shared/counter.service';
 })
 export class EditCounterComponent implements OnInit {
 
-  defaultCounter! : number;
+  value = 1;
 
-  constructor( private counterService: CounterService ) { }
+  constructor( public counterService: CounterService ) { }
 
   ngOnInit(): void {
-    this.defaultCounter = this.counterService.defaultCounter;
+
   }
 
-  addCounterTs() {
-    return this.counterService.addCounter(this.defaultCounter);
-  }
-
-  subCounterTs() {
-    return this.counterService.subCounter(this.defaultCounter);
-  }
 }

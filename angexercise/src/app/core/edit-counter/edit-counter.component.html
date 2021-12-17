@@ -1,5 +1,5 @@
-<input type="number" min="0" [(ngModel)]="defaultCounter" >
+<input type="number" min="0" [(ngModel)]="value" >
 <label for="number">
-  <button (click)="addCounterTs()">Add</button>
-  <button (click)="subCounterTs()">Sub</button>
+  <button (click)="counterService.addCounter$(value)">Add</button>
+  <button (click)="counterService.subCounter$(value)">Sub</button>
 </label>
